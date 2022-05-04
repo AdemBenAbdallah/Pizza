@@ -1,0 +1,51 @@
+.form{
+    display : flex;
+}
+.form .img{
+    flex-basis: 50%;
+    height : calc(100vh - 184px);
+    background-size :cover;
+    background-position: center;
+}
+.form form{
+    flex-basis: 50%;
+    display : flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content : center;
+    gap: 50px;
+}
+.form #standard-basic{
+    width : 400px;
+}
+.form #textarea{
+    width : 400px;
+}
+.form .button{
+    align-self: flex-start;
+    background: #000;
+    margin-left: calc((100% - 400px) / 2);
+}
+@media (max-width : 700px) {
+    .form{
+        flex-direction: column;
+    }
+    .form .img{
+        display: none;
+    }
+    .form form{
+        flex-basis: calc(100vh - 184px);
+    }
+}
+
+@media (max-width : 500px) {
+    .form #standard-basic{
+        width : 300px;
+    }
+    .form #textarea{
+        width : 300px;
+    }
+    .form .button{
+        margin-left: calc((100% - 300px) / 2);
+    }
+}
